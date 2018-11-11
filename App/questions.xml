@@ -2,6 +2,18 @@
 <Questions>
 
   <Question Id="0">
+    <QuestionText>Comment s'appelle HUGO ?</QuestionText>
+    <Answers>
+      <A>Michel</A>
+      <B>Jean-Marc</B>
+      <C>Denis</C>
+      <D>Jacques</D>
+    </Answers>
+    <GoodAnswer>B</GoodAnswer>
+    <Image>C:/Users/hltarnec/Desktop/1.jpg</Image>
+  </Question>
+
+  <Question Id="1">
     <QuestionText>Comment s'appelle M. Salotti ?</QuestionText>
     <Answers>
       <A>Michel</A>
@@ -10,6 +22,57 @@
       <D>Jacques</D>
     </Answers>
     <GoodAnswer>B</GoodAnswer>
+    <Image>nothing</Image>
   </Question>
+
+  <Question Id="2">
+    <QuestionText>Comment s'appelle M. JEAN ?</QuestionText>
+    <Answers>
+      <A>Michel</A>
+      <B>Jean-Marc</B>
+      <C>Denis</C>
+      <D>Jacques</D>
+    </Answers>
+    <GoodAnswer>B</GoodAnswer>
+    <Image>nothing</Image>
+  </Question>
+
+  <Question Id="3">
+    <QuestionText>Comment s'appelle M. PIERRE ?</QuestionText>
+    <Answers>
+      <A>Michel</A>
+      <B>Jean-Marc</B>
+      <C>Denis</C>
+      <D>Jacques</D>
+    </Answers>
+    <GoodAnswer>B</GoodAnswer>
+    <Image>C:/Users/hltarnec/Desktop/1.jpg</Image>
+  </Question>
+
+  <Question Id="4">
+    <QuestionText>Comment s'appelle M. dsfgs ?</QuestionText>
+    <Answers>
+      <A>Michel</A>
+      <B>Jean-Marc</B>
+      <C>Denis</C>
+      <D>Jacques</D>
+    </Answers>
+    <GoodAnswer>B</GoodAnswer>
+    <Image>C:/Users/hltarnec/Desktop/3.jpg</Image>
+  </Question>
+
+  <Question Id="5">
+    <QuestionText>Comment s'appelle M. Bretin ?</QuestionText>
+    <Answers>
+      <A>Michel</A>
+      <B>Jean-Marc</B>
+      <C>Denis</C>
+      <D>Jacques</D>
+    </Answers>
+    <GoodAnswer>B</GoodAnswer>
+    <Image>C:/Users/hltarnec/Desktop/2.jpg</Image>
+  </Question>
+  
+ 
 
 </Questions>

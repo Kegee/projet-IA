@@ -12,7 +12,7 @@ namespace App
 {
     public partial class Questionnaire : Form
     {
-        static List<int> idQ = new List < int > {0/*, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19 */};
+        static List<int> idQ = new List < int > {0, 1, 2, 3, 4, 5/*, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19 */};
         static int noteTot = 0;
         static int note = 0;
         static string bonneRep;
@@ -31,12 +31,26 @@ namespace App
         }
         private void choixQuestion()
         {
-            Question prochaineQuestion = new Question(0);
+            Random aleatoire = new Random();
+            int entier = aleatoire.Next(idQ.Count);
+            Question prochaineQuestion = new Question(entier);
+            
             txtQuestion.Text = prochaineQuestion.QuestionText;
             ckbReponse1.Text = prochaineQuestion.Answers[0];
             ckbReponse2.Text = prochaineQuestion.Answers[1];
             ckbReponse3.Text = prochaineQuestion.Answers[2];
             ckbReponse4.Text = prochaineQuestion.Answers[3];
+
+            if (prochaineQuestion.Image1 !="nothing")
+            {
+                Image image = Image.FromFile(prochaineQuestion.Image1);
+                pictureBox1.Image = image;
+            }
+            else
+            {
+                pictureBox1.Image = null;
+            }
+            idQ.Remove(entier);
             bonneRep = prochaineQuestion.GoodAnswer;
         }
         private void unchecking()
@@ -98,6 +112,11 @@ namespace App
                 ckbReponse3.ForeColor = Color.Red;
                 ckbReponse4.ForeColor = Color.Green;
             }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

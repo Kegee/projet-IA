@@ -35,6 +35,8 @@
             this.ckbReponse4 = new System.Windows.Forms.CheckBox();
             this.btnReponse = new System.Windows.Forms.Button();
             this.btnSuivant = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // txtQuestion
@@ -106,11 +108,21 @@
             this.btnSuivant.UseVisualStyleBackColor = true;
             this.btnSuivant.Click += new System.EventHandler(this.btnSuivant_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(323, 82);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(233, 219);
+            this.pictureBox1.TabIndex = 7;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
             // Questionnaire
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(605, 386);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnSuivant);
             this.Controls.Add(this.btnReponse);
             this.Controls.Add(this.ckbReponse4);
@@ -120,6 +132,7 @@
             this.Controls.Add(this.txtQuestion);
             this.Name = "Questionnaire";
             this.Text = "Questionnaire";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -134,5 +147,6 @@
         private System.Windows.Forms.CheckBox ckbReponse4;
         private System.Windows.Forms.Button btnReponse;
         private System.Windows.Forms.Button btnSuivant;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

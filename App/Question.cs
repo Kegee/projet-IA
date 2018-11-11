@@ -15,12 +15,15 @@ namespace App
         public List<string> Answers { get; set; }
         public string GoodAnswer { get; set; }
 
-        public Question(int id, string questionText, List<string> answers, string goodAnswer)
+        public string Image1 { get; set; }
+
+        public Question(int id, string questionText, List<string> answers, string goodAnswer, string image1)
         {
             Id = id;
             QuestionText = questionText;
             Answers = answers;
             GoodAnswer = goodAnswer;
+            Image1 = Image1;
 
         }
         public Question(int id)
@@ -38,7 +41,9 @@ namespace App
                         {
                             QuestionText = item.Element("QuestionText").Value,
                             Answers = item.Descendants("Answers").Descendants().Select(x => x.Value).ToList(),
-                            GoodAnswer = item.Element("GoodAnswer").Value
+                            GoodAnswer = item.Element("GoodAnswer").Value,
+                            Image1=item.Element("Image").Value,
+                            
                         };
 
             //On entre les valeurs dans la question
@@ -47,6 +52,7 @@ namespace App
                 this.QuestionText = item.QuestionText;
                 this.Answers = item.Answers;
                 this.GoodAnswer = item.GoodAnswer;
+                this.Image1 = item.Image1;
             }
 
             return;
