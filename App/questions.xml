@@ -2,15 +2,15 @@
 <Questions>
 
   <Question Id="0">
-    <QuestionText>Comment s'appelle HUGO ?</QuestionText>
+    <QuestionText>Une I.A forte est une I.A ...</QuestionText>
     <Answers>
-      <A>Michel</A>
-      <B>Jean-Marc</B>
-      <C>Denis</C>
-      <D>Jacques</D>
+      <A>qui dispose de grandes capacités de calcul</A>
+      <B>qui commande des outils d'usine puissants</B>
+      <C>indifferenciable de l'humain</C>
+      <D></D>
     </Answers>
-    <GoodAnswer>B</GoodAnswer>
-    <Image>C:/Users/hltarnec/Desktop/1.jpg</Image>
+    <GoodAnswer>A</GoodAnswer>
+    <Image></Image>
   </Question>
 
   <Question Id="1">
@@ -22,55 +22,55 @@
       <D>Jacques</D>
     </Answers>
     <GoodAnswer>B</GoodAnswer>
-    <Image>nothing</Image>
+    <Image>C:/Users/hltarnec/Desktop/JMS1.jpg</Image>
   </Question>
 
   <Question Id="2">
-    <QuestionText>Comment s'appelle M. JEAN ?</QuestionText>
+    <QuestionText>Parmi les algorithmes suivants, laquelle n'est pas une méthode de construction d'I.A ?</QuestionText>
     <Answers>
-      <A>Michel</A>
-      <B>Jean-Marc</B>
-      <C>Denis</C>
-      <D>Jacques</D>
+      <A>Min/Max</A>
+      <B>Alpha/Beta</B>
+      <C>Genetique</C>
+      <D>Test de Turing</D>
     </Answers>
-    <GoodAnswer>B</GoodAnswer>
-    <Image>nothing</Image>
+    <GoodAnswer>D</GoodAnswer>
+    <Image></Image>
   </Question>
 
   <Question Id="3">
-    <QuestionText>Comment s'appelle M. PIERRE ?</QuestionText>
+    <QuestionText>Un algorithme d'exploration des états renvoie l'arbre suivant. Quels valeurs l'algorithme Min/Max donne à B2 ?</QuestionText>
     <Answers>
-      <A>Michel</A>
-      <B>Jean-Marc</B>
-      <C>Denis</C>
-      <D>Jacques</D>
+      <A>5</A>
+      <B>8</B>
+      <C>10</C>
+      <D>12</D>
     </Answers>
-    <GoodAnswer>B</GoodAnswer>
-    <Image>C:/Users/hltarnec/Desktop/1.jpg</Image>
+    <GoodAnswer>A</GoodAnswer>
+    <Image>C:/Users/hltarnec/Desktop/1.png</Image>
   </Question>
 
   <Question Id="4">
-    <QuestionText>Comment s'appelle M. dsfgs ?</QuestionText>
+    <QuestionText>Quel est l'interêt de l'algorithme alpha/beta ?</QuestionText>
     <Answers>
-      <A>Michel</A>
-      <B>Jean-Marc</B>
-      <C>Denis</C>
-      <D>Jacques</D>
+      <A>Une méthode d'exploration des états</A>
+      <B>un Min/Max qui élague les choses inutiles</B>
+      <C>Une amélioration intermédiaire entre Dijkstra et A*</C>
+      <D>Une version différente de faire le Min/Max</D>
     </Answers>
     <GoodAnswer>B</GoodAnswer>
-    <Image>C:/Users/hltarnec/Desktop/3.jpg</Image>
+    <Image></Image>
   </Question>
 
   <Question Id="5">
-    <QuestionText>Comment s'appelle M. Bretin ?</QuestionText>
+    <QuestionText>Dans quelle cas utilise t-on un algorithme génétique ?</QuestionText>
     <Answers>
-      <A>Michel</A>
-      <B>Jean-Marc</B>
-      <C>Denis</C>
-      <D>Jacques</D>
+      <A>C'est la première étape de création d'une IA de deep learning</A>
+      <B>L'algorithme génétique ne donne pas de résultat parfait.Il n'est donc jamais utilisé</B>
+      <C>Trouver un tableau optimal</C>
+      <D></D>
     </Answers>
     <GoodAnswer>B</GoodAnswer>
-    <Image>C:/Users/hltarnec/Desktop/2.jpg</Image>
+    <Image>C:/Users/hltarnec/Desktop/2.png</Image>
   </Question>
   
  

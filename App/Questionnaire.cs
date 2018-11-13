@@ -33,15 +33,23 @@ namespace App
         {
             Random aleatoire = new Random();
             int entier = aleatoire.Next(idQ.Count);
-            Question prochaineQuestion = new Question(entier);
+            Question prochaineQuestion = new Question(idQ[entier]);
             
-            txtQuestion.Text = prochaineQuestion.QuestionText;
+            txtQuestion.Text= prochaineQuestion.QuestionText;
             ckbReponse1.Text = prochaineQuestion.Answers[0];
             ckbReponse2.Text = prochaineQuestion.Answers[1];
             ckbReponse3.Text = prochaineQuestion.Answers[2];
             ckbReponse4.Text = prochaineQuestion.Answers[3];
+            if (prochaineQuestion.Answers[3] == "")
+            {
+                ckbReponse4.Visible = false;
+            }
+            if (prochaineQuestion.Answers[3] != "")
+            {
+                ckbReponse4.Visible = true;
+            }
 
-            if (prochaineQuestion.Image1 !="nothing")
+            if (prochaineQuestion.Image1 !="")
             {
                 Image image = Image.FromFile(prochaineQuestion.Image1);
                 pictureBox1.Image = image;
@@ -50,7 +58,7 @@ namespace App
             {
                 pictureBox1.Image = null;
             }
-            idQ.Remove(entier);
+            idQ.Remove(idQ[entier]);
             bonneRep = prochaineQuestion.GoodAnswer;
         }
         private void unchecking()
@@ -115,6 +123,31 @@ namespace App
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtQuestion_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtQuestiona_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ckbReponse1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ckbReponse3_CheckedChanged(object sender, EventArgs e)
         {
 
         }
