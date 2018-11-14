@@ -70,9 +70,178 @@
       <D></D>
     </Answers>
     <GoodAnswer>B</GoodAnswer>
-    <Image>C:/Users/hltarnec/Desktop/2.png</Image>
+    <Image></Image>
   </Question>
-  
- 
+
+  <Question Id="6">
+    <QuestionText>Quelles branches auraient pu être élaguées ?</QuestionText>
+    <Answers>
+      <A>B5/D5/D1</A>
+      <B>B6/D4/D1</B>
+      <C>B5/D4/D9</C>
+      <D>B6/D5/D9</D>
+    </Answers>
+    <GoodAnswer>D</GoodAnswer>
+    <Image>C:/Users/hltarnec/Desktop/branche.PNG</Image>
+  </Question>
+  <Question Id="7">
+    <QuestionText>La matrice d'adjacence de ce graphe est correct</QuestionText>
+    <Answers>
+      <A>Vrai</A>
+      <B>Faux</B>
+      <C></C>
+      <D></D>
+    </Answers>
+    <GoodAnswer>A</GoodAnswer>
+    <Image>C:/Users/hltarnec/Desktop/mat.PNG</Image>
+  </Question>
+  <Question Id="8">
+    <QuestionText>Définition standard de L'IA :</QuestionText>
+    <Answers>
+      <A>Ensemble des techniques et algorithmes permettant de résoudre des problèmes à l’aide d’un ordinateur.</A>
+      <B>Simulation de l'intelligence</B>
+      <C>Trouver un tableau optimal</C>
+      <D></D>
+    </Answers>
+    <GoodAnswer>B</GoodAnswer>
+    <Image></Image>
+  </Question>
+
+  <Question Id="9">
+    <QuestionText>Combien possède de degré de liberté une liaison glissère ?</QuestionText>
+    <Answers>
+      <A>1</A>
+      <B>2</B>
+      <C>3</C>
+      <D>6</D>
+    </Answers>
+    <GoodAnswer>A</GoodAnswer>
+    <Image></Image>
+  </Question>
+
+  <Question Id="10">
+    <QuestionText>
+      Une région est munie d’un réseau de trains, représenté par le graphe Γ ci-dessous. Les stations sont
+      symbolisées par les sommets A, B, C, D, E, F et G. Chaque arête représente une ligne reliant deux gares.
+      Les temps de parcours (correspondance comprise) en minutes entre chaque sommet ont été rajoutés
+      sur le graphe. On considère le graphe Γ ci-dessous, déterminer le chemin le plus court en minute :
+    </QuestionText>
+    <Answers>
+      <A>A->B->C->D</A>
+      <B>A->B->C->D</B>
+      <C>A->B->C->D</C>
+      <D>A->B->C->D</D>
+    </Answers>
+    <GoodAnswer>B</GoodAnswer>
+    <Image>C:/Users/hltarnec/Desktop/download.png</Image>
+  </Question>
+
+  <Question Id="11">
+    <QuestionText>Dans quelle cas utilise t-on un algorithme génétique ?</QuestionText>
+    <Answers>
+      <A>C'est la première étape de création d'une IA de deep learning</A>
+      <B>L'algorithme génétique ne donne pas de résultat parfait.Il n'est donc jamais utilisé</B>
+      <C>Trouver un tableau optimal</C>
+      <D></D>
+    </Answers>
+    <GoodAnswer>B</GoodAnswer>
+    <Image></Image>
+  </Question>
+
+  <Question Id="12">
+    <QuestionText>Dans quelle cas utilise t-on un algorithme génétique ?</QuestionText>
+    <Answers>
+      <A>C'est la première étape de création d'une IA de deep learning</A>
+      <B>L'algorithme génétique ne donne pas de résultat parfait.Il n'est donc jamais utilisé</B>
+      <C>Trouver un tableau optimal</C>
+      <D></D>
+    </Answers>
+    <GoodAnswer>B</GoodAnswer>
+    <Image></Image>
+  </Question>
+
+  <Question Id="13">
+    <QuestionText>Dans quelle cas utilise t-on un algorithme génétique ?</QuestionText>
+    <Answers>
+      <A>C'est la première étape de création d'une IA de deep learning</A>
+      <B>L'algorithme génétique ne donne pas de résultat parfait.Il n'est donc jamais utilisé</B>
+      <C>Trouver un tableau optimal</C>
+      <D></D>
+    </Answers>
+    <GoodAnswer>B</GoodAnswer>
+    <Image></Image>
+  </Question>
+
+  <Question Id="14">
+    <QuestionText>Dans quelle cas utilise t-on un algorithme génétique ?</QuestionText>
+    <Answers>
+      <A>C'est la première étape de création d'une IA de deep learning</A>
+      <B>L'algorithme génétique ne donne pas de résultat parfait.Il n'est donc jamais utilisé</B>
+      <C>Trouver un tableau optimal</C>
+      <D></D>
+    </Answers>
+    <GoodAnswer>B</GoodAnswer>
+    <Image></Image>
+  </Question>
+
+  <Question Id="15">
+    <QuestionText>Dans quelle cas utilise t-on un algorithme génétique ?</QuestionText>
+    <Answers>
+      <A>C'est la première étape de création d'une IA de deep learning</A>
+      <B>L'algorithme génétique ne donne pas de résultat parfait.Il n'est donc jamais utilisé</B>
+      <C>Trouver un tableau optimal</C>
+      <D></D>
+    </Answers>
+    <GoodAnswer>B</GoodAnswer>
+    <Image></Image>
+  </Question>
+
+  <Question Id="16">
+    <QuestionText>Dans quelle cas utilise t-on un algorithme génétique ?</QuestionText>
+    <Answers>
+      <A>C'est la première étape de création d'une IA de deep learning</A>
+      <B>L'algorithme génétique ne donne pas de résultat parfait.Il n'est donc jamais utilisé</B>
+      <C>Trouver un tableau optimal</C>
+      <D></D>
+    </Answers>
+    <GoodAnswer>B</GoodAnswer>
+    <Image></Image>
+  </Question>
+
+  <Question Id="17">
+    <QuestionText>Dans quelle cas utilise t-on un algorithme génétique ?</QuestionText>
+    <Answers>
+      <A>C'est la première étape de création d'une IA de deep learning</A>
+      <B>L'algorithme génétique ne donne pas de résultat parfait.Il n'est donc jamais utilisé</B>
+      <C>Trouver un tableau optimal</C>
+      <D></D>
+    </Answers>
+    <GoodAnswer>B</GoodAnswer>
+    <Image></Image>
+  </Question>
+
+  <Question Id="18">
+    <QuestionText>Dans quelle cas utilise t-on un algorithme génétique ?</QuestionText>
+    <Answers>
+      <A>C'est la première étape de création d'une IA de deep learning</A>
+      <B>L'algorithme génétique ne donne pas de résultat parfait.Il n'est donc jamais utilisé</B>
+      <C>Trouver un tableau optimal</C>
+      <D></D>
+    </Answers>
+    <GoodAnswer>B</GoodAnswer>
+    <Image></Image>
+  </Question>
+
+  <Question Id="19">
+    <QuestionText>Dans quelle cas utilise t-on un algorithme génétique ?</QuestionText>
+    <Answers>
+      <A>C'est la première étape de création d'une IA de deep learning</A>
+      <B>L'algorithme génétique ne donne pas de résultat parfait.Il n'est donc jamais utilisé</B>
+      <C>Trouver un tableau optimal</C>
+      <D></D>
+    </Answers>
+    <GoodAnswer>B</GoodAnswer>
+    <Image></Image>
+  </Question>
 
 </Questions>

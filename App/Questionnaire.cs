@@ -12,7 +12,7 @@ namespace App
 {
     public partial class Questionnaire : Form
     {
-        static List<int> idQ = new List < int > {0, 1, 2, 3, 4, 5/*, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19 */};
+        static List<int> idQ = new List < int > {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19};
         static int noteTot = 0;
         static int note = 0;
         static string bonneRep;
@@ -40,6 +40,16 @@ namespace App
             ckbReponse2.Text = prochaineQuestion.Answers[1];
             ckbReponse3.Text = prochaineQuestion.Answers[2];
             ckbReponse4.Text = prochaineQuestion.Answers[3];
+
+            if (prochaineQuestion.Answers[2] == "")
+            {
+                ckbReponse3.Visible = false;
+            }
+            if (prochaineQuestion.Answers[2] != "")
+            {
+                ckbReponse3.Visible = true;
+            }
+
             if (prochaineQuestion.Answers[3] == "")
             {
                 ckbReponse4.Visible = false;
@@ -48,7 +58,7 @@ namespace App
             {
                 ckbReponse4.Visible = true;
             }
-
+            
             if (prochaineQuestion.Image1 !="")
             {
                 Image image = Image.FromFile(prochaineQuestion.Image1);
