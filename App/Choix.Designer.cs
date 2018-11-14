@@ -52,6 +52,7 @@
             this.btnDijkstra.TabIndex = 1;
             this.btnDijkstra.Text = "Dijkstra";
             this.btnDijkstra.UseVisualStyleBackColor = true;
+            this.btnDijkstra.Click += new System.EventHandler(this.btnDijkstra_Click);
             // 
             // Choix
             // 

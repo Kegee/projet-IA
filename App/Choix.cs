@@ -22,5 +22,11 @@ namespace App
             Questionnaire suiteQuestion = new Questionnaire();
             suiteQuestion.Show();
         }
+
+        private void btnDijkstra_Click(object sender, EventArgs e)
+        {
+            Dijkstra exercice = new Dijkstra();
+            exercice.Show();
+        }
     }
 }

@@ -20,3 +20,4 @@ C:\Users\hltarnec\Documents\GitHub\projet-IA\App\obj\Debug\App.Properties.Resour
 C:\Users\hltarnec\Documents\GitHub\projet-IA\App\obj\Debug\App.Questionnaire.resources
 C:\Users\hltarnec\Documents\GitHub\projet-IA\App\obj\Debug\App.Resultats.resources
 C:\Users\hltarnec\Documents\GitHub\projet-IA\App\obj\Debug\App.csproj.GenerateResource.Cache
+H:\TD info\Projets - examens\projet-IA\App\obj\Debug\App.Dijkstra.resources
