@@ -47,6 +47,28 @@ namespace App
 
             g.GetSearchTree(treeView1);
         }
+        private bool validation (int numEtape)
+        {
+            numinitial = Convert.ToInt32(textBox1.Text);
+            numfinal = Convert.ToInt32(textBox2.Text);
+            SearchTree g = new SearchTree();
+            Node2 N0 = new Node2();
+            N0.numero = numinitial;
+            List<GenericNode> solution = g.RechercheSolutionAEtoile(N0);
+
+            Node2 N1 = N0;
+            for (int i = 1; i < solution.Count; i++)
+            {
+                Node2 N2 = (Node2)solution[i];
+                listBox1.Items.Add(Convert.ToString(N1.numero)
+                     + "--->" + Convert.ToString(N2.numero)
+                     + "   : " + Convert.ToString(matrice[N1.numero, N2.numero]));
+                N1 = N2;
+            }
+
+            g.GetSearchTree(treeView1);
+            return true;
+        }
 
         private void initialisationMatrice()
         {
@@ -129,8 +151,9 @@ namespace App
             txtBFerme.Text = "";
             txtBOuvert.Text = "";
             justeOuPas = new List<bool>();
-            // à définir !!!
-            verification();
+
+            if (validation(etapeCorrection)) justeOuPas.Add(true);
+            else justeOuPas.Add(false);
             /* 
              * si verification donne que le resultat est juste : justeoupas.append(true) sinon justeoupas.append(false);
              */
@@ -142,6 +165,16 @@ namespace App
             bool resultat = true;
             foreach (bool verification in justeOuPas) if (!verification) resultat = false;
 
+            if (resultat)
+            {
+                txtBResultat.ForeColor = Color.Green;
+                txtBResultat.Text = "Bravo, vous avez réussi !";
+            }
+            else
+            {
+                txtBResultat.ForeColor = Color.Red;
+                txtBResultat.Text = "Dommage, vous avez fait une erreur...";
+            }
         }
     }
 }

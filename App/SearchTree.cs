@@ -96,6 +96,42 @@ namespace App
             return _LN;
         }
 
+        //il faut que ça rende true si à l'etape concernée les ouverts et les fermés donné par l'utilisateur sont les bons
+        public bool RechercheSolutionAEtoileValidation(GenericNode N0,int etapeValidation,string ouvertDonne,string fermeDonne)
+        {
+            int etape = 0;
+            L_Ouverts = new List<GenericNode>();
+            L_Fermes = new List<GenericNode>();
+            // Le noeud passé en paramètre est supposé être le noeud initial
+            GenericNode N = N0;
+            L_Ouverts.Add(N0);
+
+            // tant que le noeud n'est pas terminal et que ouverts n'est pas vide
+            while (L_Ouverts.Count != 0 && N.EndState() == false)
+            {
+                // Le meilleur noeud des ouverts est supposé placé en tête de liste
+                // On le place dans les fermés
+                L_Ouverts.Remove(N);
+                L_Fermes.Add(N);
+
+                // Il faut trouver les noeuds successeurs de N
+                this.MAJSuccesseurs(N);
+                // Inutile de retrier car les insertions ont été faites en respectant l'ordre
+
+                // On prend le meilleur, donc celui en position 0, pour continuer à explorer les états
+                // A condition qu'il existe bien sûr
+                if (L_Ouverts.Count > 0)
+                {
+                    N = L_Ouverts[0];
+                }
+                else
+                {
+                    N = null;
+                }
+                etape++;
+            }
+        }
+
         private void MAJSuccesseurs(GenericNode N)
         {
             // On fait appel à GetListSucc, méthode abstraite qu'on doit réécrire pour chaque
