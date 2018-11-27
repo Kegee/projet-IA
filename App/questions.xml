@@ -15,7 +15,7 @@
 
 
   <Question Id="1">
-    <QuestionText>Parmi les algorithmes suivants, laquelle n'est pas une méthode de construction d'I.A ?</QuestionText>
+    <QuestionText>Parmi les algorithmes suivants, lequel n'est pas une méthode de construction d'I.A ?</QuestionText>
     <Answers>
       <A>Min/Max</A>
       <B>Alpha/Beta</B>
@@ -42,7 +42,7 @@
     <QuestionText>Quel est l'intérêt de l'algorithme alpha/beta ?</QuestionText>
     <Answers>
       <A>Une méthode d'exploration des états</A>
-      <B>un Min/Max qui élague les choses inutiles</B>
+      <B>Un Min/Max qui élague les choses inutiles</B>
       <C>Une amélioration intermédiaire entre Dijkstra et A*</C>
       <D>Une version différente de faire le Min/Max</D>
     </Answers>
@@ -153,7 +153,7 @@ sur le graphe. On considère le graphe Γ ci-dessous, déterminer le chemin le p
 
   <Question Id="12">
     <QuestionText> Le parcours A, B, D, F, E, C, G correspond à : (par convention
-      les sommets à gauche sur ce graphe seront choisis avant ceux de droite)
+les sommets à gauche sur ce graphe seront choisis avant ceux de droite)
     </QuestionText>
     <Answers>
       <A>un parcours en largeur d'abord</A>
@@ -168,7 +168,7 @@ sur le graphe. On considère le graphe Γ ci-dessous, déterminer le chemin le p
 
   <Question Id="13">
     <QuestionText> Le parcours A, B, C, E, D, F, G correspond à : (par convention
-      les sommets à gauche sur ce graphe seront choisis avant ceux de droite)
+ les sommets à gauche sur ce graphe seront choisis avant ceux de droite)
     </QuestionText>
     <Answers>
       <A>un parcours en largeur d'abord</A>
@@ -192,61 +192,49 @@ sur le graphe. On considère le graphe Γ ci-dessous, déterminer le chemin le p
     <Image></Image>
   </Question>
 
-  <Question Id="14">
-    <QuestionText>La matrice d'adjacence d'un graphe non orienté est : </QuestionText>
-    <Answers>
-      <A>symétrique</A>
-      <B>asymétrique</B>
-      <C>diagonale</C>
-      <D>linéaire</D>
-    </Answers>
-    <GoodAnswer>A</GoodAnswer>
-    <Image></Image>
-  </Question>
-
   <Question Id="15">
-    <QuestionText>La matrice d'adjacence d'un graphe non orienté est : </QuestionText>
+    <QuestionText>Qu'est ce qu'un perceptron ? </QuestionText>
     <Answers>
-      <A>symétrique</A>
-      <B>asymétrique</B>
-      <C>diagonale</C>
-      <D>linéaire</D>
+      <A>Le type de capteur dans un casque EEG</A>
+      <B>Un type de réseau de neurone le plus simple</B>
+      <C>Un </C>
+      <D></D>
     </Answers>
     <GoodAnswer>A</GoodAnswer>
     <Image></Image>
   </Question>
 
   <Question Id="16">
-    <QuestionText>La matrice d'adjacence d'un graphe non orienté est : </QuestionText>
+    <QuestionText>En quoi consiste le test de Turing ? </QuestionText>
     <Answers>
-      <A>symétrique</A>
-      <B>asymétrique</B>
-      <C>diagonale</C>
-      <D>linéaire</D>
+      <A>Il consite à tester la faculté d'une machine à imiter la conversation humaine</A>
+      <B>Test servant à déchiffrement de l'information</B>
+      <C>Examen d'entrée dans l'école d'Alan turing</C>
+      <D></D>
     </Answers>
     <GoodAnswer>A</GoodAnswer>
     <Image></Image>
   </Question>
 
   <Question Id="17">
-    <QuestionText>La matrice d'adjacence d'un graphe non orienté est : </QuestionText>
+    <QuestionText>Comment l'algorithme de Dijkstra explore t-il l'ensemble des solutions ?</QuestionText>
     <Answers>
-      <A>symétrique</A>
-      <B>asymétrique</B>
-      <C>diagonale</C>
-      <D>linéaire</D>
+      <A>Aléatoirement</A>
+      <B>Simultanément</B>
+      <C>Radiale</C>
+      <D>Linéaire</D>
     </Answers>
-    <GoodAnswer>A</GoodAnswer>
+    <GoodAnswer>C</GoodAnswer>
     <Image></Image>
   </Question>
 
   <Question Id="18">
-    <QuestionText>La matrice d'adjacence d'un graphe non orienté est : </QuestionText>
+    <QuestionText>Qu'est ce que deep blue ?</QuestionText>
     <Answers>
-      <A>symétrique</A>
-      <B>asymétrique</B>
-      <C>diagonale</C>
-      <D>linéaire</D>
+      <A>Un ordinateur joueur d'echec ayant battu le champion du monde</A>
+      <B>Le premier algorithme de detection d'image </B>
+      <C>Un capteur ultraviolet </C>
+      <D> </D>
     </Answers>
     <GoodAnswer>A</GoodAnswer>
     <Image></Image>
@@ -263,5 +251,6 @@ sur le graphe. On considère le graphe Γ ci-dessous, déterminer le chemin le p
     <GoodAnswer>A</GoodAnswer>
     <Image></Image>
   </Question>
+
 
 </Questions>
