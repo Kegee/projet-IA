@@ -130,7 +130,7 @@ namespace App
             txtBOuvert.Text = "";
             justeOuPas = new List<bool>();
             // à définir !!!
-            verification();
+            //verification();
             /* 
              * si verification donne que le resultat est juste : justeoupas.append(true) sinon justeoupas.append(false);
              */

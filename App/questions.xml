@@ -13,19 +13,8 @@
     <Image></Image>
   </Question>
 
-  <Question Id="1">
-    <QuestionText>Comment s'appelle M. Salotti ?</QuestionText>
-    <Answers>
-      <A>Michel</A>
-      <B>Jean-Marc</B>
-      <C>Denis</C>
-      <D>Jacques</D>
-    </Answers>
-    <GoodAnswer>B</GoodAnswer>
-    <Image>C:/Users/hltarnec/Desktop/JMS1.jpg</Image>
-  </Question>
 
-  <Question Id="2">
+  <Question Id="1">
     <QuestionText>Parmi les algorithmes suivants, laquelle n'est pas une méthode de construction d'I.A ?</QuestionText>
     <Answers>
       <A>Min/Max</A>
@@ -37,7 +26,7 @@
     <Image></Image>
   </Question>
 
-  <Question Id="3">
+  <Question Id="2">
     <QuestionText>Un algorithme d'exploration des états renvoie l'arbre suivant. Quels valeurs l'algorithme Min/Max donne à B2 ?</QuestionText>
     <Answers>
       <A>5</A>
@@ -46,11 +35,11 @@
       <D>12</D>
     </Answers>
     <GoodAnswer>A</GoodAnswer>
-    <Image>C:/Users/hltarnec/Desktop/1.png</Image>
+    <Image>H:/1.png</Image>
   </Question>
 
-  <Question Id="4">
-    <QuestionText>Quel est l'interêt de l'algorithme alpha/beta ?</QuestionText>
+  <Question Id="3">
+    <QuestionText>Quel est l'intérêt de l'algorithme alpha/beta ?</QuestionText>
     <Answers>
       <A>Une méthode d'exploration des états</A>
       <B>un Min/Max qui élague les choses inutiles</B>
@@ -61,11 +50,12 @@
     <Image></Image>
   </Question>
 
-  <Question Id="5">
+  <Question Id="4">
     <QuestionText>Dans quelle cas utilise t-on un algorithme génétique ?</QuestionText>
     <Answers>
       <A>C'est la première étape de création d'une IA de deep learning</A>
-      <B>L'algorithme génétique ne donne pas de résultat parfait.Il n'est donc jamais utilisé</B>
+      <B>L'algorithme génétique ne donne pas de 
+résultat parfait. Il n'est donc jamais utilisé</B>
       <C>Trouver un tableau optimal</C>
       <D></D>
     </Answers>
@@ -73,7 +63,7 @@
     <Image></Image>
   </Question>
 
-  <Question Id="6">
+  <Question Id="5">
     <QuestionText>Quelles branches auraient pu être élaguées ?</QuestionText>
     <Answers>
       <A>B5/D5/D1</A>
@@ -82,10 +72,10 @@
       <D>B6/D5/D9</D>
     </Answers>
     <GoodAnswer>D</GoodAnswer>
-    <Image>C:/Users/hltarnec/Desktop/branche.PNG</Image>
+    <Image>H:/branche.PNG</Image>
   </Question>
-  <Question Id="7">
-    <QuestionText>La matrice d'adjacence de ce graphe est correct</QuestionText>
+  <Question Id="6">
+    <QuestionText>La matrice d'adjacence de ce graphe est-elle correct ?</QuestionText>
     <Answers>
       <A>Vrai</A>
       <B>Faux</B>
@@ -93,22 +83,23 @@
       <D></D>
     </Answers>
     <GoodAnswer>A</GoodAnswer>
-    <Image>C:/Users/hltarnec/Desktop/mat.PNG</Image>
+    <Image>H:/mat.PNG</Image>
   </Question>
-  <Question Id="8">
+  <Question Id="7">
     <QuestionText>Définition standard de L'IA :</QuestionText>
     <Answers>
-      <A>Ensemble des techniques et algorithmes permettant de résoudre des problèmes à l’aide d’un ordinateur.</A>
+      <A>Ensemble des techniques et algorithmes permettant de résoudre
+des problèmes à l’aide d’un ordinateur.</A>
       <B>Simulation de l'intelligence</B>
-      <C>Trouver un tableau optimal</C>
+      <C></C>
       <D></D>
     </Answers>
-    <GoodAnswer>B</GoodAnswer>
+    <GoodAnswer>A</GoodAnswer>
     <Image></Image>
   </Question>
 
-  <Question Id="9">
-    <QuestionText>Combien possède de degré de liberté une liaison glissère ?</QuestionText>
+  <Question Id="8">
+    <QuestionText>Combien possède de degré de liberté une liaison glissière ?</QuestionText>
     <Answers>
       <A>1</A>
       <B>2</B>
@@ -119,128 +110,157 @@
     <Image></Image>
   </Question>
 
-  <Question Id="10">
-    <QuestionText>
-      Une région est munie d’un réseau de trains, représenté par le graphe Γ ci-dessous. Les stations sont
-      symbolisées par les sommets A, B, C, D, E, F et G. Chaque arête représente une ligne reliant deux gares.
-      Les temps de parcours (correspondance comprise) en minutes entre chaque sommet ont été rajoutés
-      sur le graphe. On considère le graphe Γ ci-dessous, déterminer le chemin le plus court en minute :
+  <Question Id="9">
+    <QuestionText> Une région est munie d’un réseau de trains, représenté par le graphe Γ ci-dessous. Les stations sont
+symbolisées par les sommets A, B, C, D, E et F. Chaque arête représente une ligne reliant deux gares.
+Les temps de parcours (correspondance comprise) en minutes entre chaque sommet ont été rajoutés
+sur le graphe. On considère le graphe Γ ci-dessous, déterminer le chemin le plus court entre A et E en minute :
     </QuestionText>
     <Answers>
-      <A>A->B->C->D</A>
-      <B>A->B->C->D</B>
-      <C>A->B->C->D</C>
-      <D>A->B->C->D</D>
+      <A>A->C->D->E</A>
+      <B>A->F->E</B>
+      <C>A->C->F->E</C>
+      <D>A->B->D->E</D>
     </Answers>
-    <GoodAnswer>B</GoodAnswer>
-    <Image>C:/Users/hltarnec/Desktop/download.png</Image>
+    <GoodAnswer>C</GoodAnswer>
+    <Image>H:/Download.PNG</Image>
   </Question>
 
-  <Question Id="11">
-    <QuestionText>Dans quelle cas utilise t-on un algorithme génétique ?</QuestionText>
+  <Question Id="10">
+    <QuestionText>Dans quel jeu utilise t-on un algorithme alpha/Beta ?</QuestionText>
     <Answers>
-      <A>C'est la première étape de création d'une IA de deep learning</A>
-      <B>L'algorithme génétique ne donne pas de résultat parfait.Il n'est donc jamais utilisé</B>
-      <C>Trouver un tableau optimal</C>
-      <D></D>
+      <A>Jeu d'échec</A>
+      <B>Jeu du backgammon</B>
+      <C>Jeu de dames chinoise</C>
+      <D>Jeu de dame</D>
     </Answers>
     <GoodAnswer>B</GoodAnswer>
+    <Image></Image>
+  </Question>
+
+
+  <Question Id="11">
+    <QuestionText>L’algorithme alpha-beta permet d'améliorer...</QuestionText>
+    <Answers>
+      <A>l’algorithme A*</A>
+      <B>l'algorithme de Performance</B>
+      <C>l’algorithme MinMax</C>
+      <D>l'algorithme génétique</D>
+    </Answers>
+    <GoodAnswer>C</GoodAnswer>
     <Image></Image>
   </Question>
 
   <Question Id="12">
-    <QuestionText>Dans quelle cas utilise t-on un algorithme génétique ?</QuestionText>
+    <QuestionText> Le parcours A, B, D, F, E, C, G correspond à : (par convention
+      les sommets à gauche sur ce graphe seront choisis avant ceux de droite)
+    </QuestionText>
     <Answers>
-      <A>C'est la première étape de création d'une IA de deep learning</A>
-      <B>L'algorithme génétique ne donne pas de résultat parfait.Il n'est donc jamais utilisé</B>
-      <C>Trouver un tableau optimal</C>
-      <D></D>
+      <A>un parcours en largeur d'abord</A>
+      <B>un parcours en profondeur d'abord</B>
+      <C>un parcours d'épaisseur d'abord</C>
+      <D>un parcours en longueur d'abord</D>
     </Answers>
     <GoodAnswer>B</GoodAnswer>
-    <Image></Image>
+    <Image>H:/parcoursenprofondeur.png</Image>
   </Question>
 
+
   <Question Id="13">
-    <QuestionText>Dans quelle cas utilise t-on un algorithme génétique ?</QuestionText>
+    <QuestionText> Le parcours A, B, C, E, D, F, G correspond à : (par convention
+      les sommets à gauche sur ce graphe seront choisis avant ceux de droite)
+    </QuestionText>
     <Answers>
-      <A>C'est la première étape de création d'une IA de deep learning</A>
-      <B>L'algorithme génétique ne donne pas de résultat parfait.Il n'est donc jamais utilisé</B>
-      <C>Trouver un tableau optimal</C>
-      <D></D>
+      <A>un parcours en largeur d'abord</A>
+      <B>un parcours en profondeur d'abord</B>
+      <C>un parcours d'épaisseur d'abord</C>
+      <D>un parcours en longueur d'abord</D>
     </Answers>
-    <GoodAnswer>B</GoodAnswer>
+    <GoodAnswer>A</GoodAnswer>
+    <Image>H:/parcoursenprofondeur.png</Image>
+  </Question>
+  
+  <Question Id="14">
+    <QuestionText>La matrice d'adjacence d'un graphe non orienté est : </QuestionText>
+    <Answers>
+      <A>symétrique</A>
+      <B>asymétrique</B>
+      <C>diagonale</C>
+      <D>linéaire</D>
+    </Answers>
+    <GoodAnswer>A</GoodAnswer>
     <Image></Image>
   </Question>
 
   <Question Id="14">
-    <QuestionText>Dans quelle cas utilise t-on un algorithme génétique ?</QuestionText>
+    <QuestionText>La matrice d'adjacence d'un graphe non orienté est : </QuestionText>
     <Answers>
-      <A>C'est la première étape de création d'une IA de deep learning</A>
-      <B>L'algorithme génétique ne donne pas de résultat parfait.Il n'est donc jamais utilisé</B>
-      <C>Trouver un tableau optimal</C>
-      <D></D>
+      <A>symétrique</A>
+      <B>asymétrique</B>
+      <C>diagonale</C>
+      <D>linéaire</D>
     </Answers>
-    <GoodAnswer>B</GoodAnswer>
+    <GoodAnswer>A</GoodAnswer>
     <Image></Image>
   </Question>
 
   <Question Id="15">
-    <QuestionText>Dans quelle cas utilise t-on un algorithme génétique ?</QuestionText>
+    <QuestionText>La matrice d'adjacence d'un graphe non orienté est : </QuestionText>
     <Answers>
-      <A>C'est la première étape de création d'une IA de deep learning</A>
-      <B>L'algorithme génétique ne donne pas de résultat parfait.Il n'est donc jamais utilisé</B>
-      <C>Trouver un tableau optimal</C>
-      <D></D>
+      <A>symétrique</A>
+      <B>asymétrique</B>
+      <C>diagonale</C>
+      <D>linéaire</D>
     </Answers>
-    <GoodAnswer>B</GoodAnswer>
+    <GoodAnswer>A</GoodAnswer>
     <Image></Image>
   </Question>
 
   <Question Id="16">
-    <QuestionText>Dans quelle cas utilise t-on un algorithme génétique ?</QuestionText>
+    <QuestionText>La matrice d'adjacence d'un graphe non orienté est : </QuestionText>
     <Answers>
-      <A>C'est la première étape de création d'une IA de deep learning</A>
-      <B>L'algorithme génétique ne donne pas de résultat parfait.Il n'est donc jamais utilisé</B>
-      <C>Trouver un tableau optimal</C>
-      <D></D>
+      <A>symétrique</A>
+      <B>asymétrique</B>
+      <C>diagonale</C>
+      <D>linéaire</D>
     </Answers>
-    <GoodAnswer>B</GoodAnswer>
+    <GoodAnswer>A</GoodAnswer>
     <Image></Image>
   </Question>
 
   <Question Id="17">
-    <QuestionText>Dans quelle cas utilise t-on un algorithme génétique ?</QuestionText>
+    <QuestionText>La matrice d'adjacence d'un graphe non orienté est : </QuestionText>
     <Answers>
-      <A>C'est la première étape de création d'une IA de deep learning</A>
-      <B>L'algorithme génétique ne donne pas de résultat parfait.Il n'est donc jamais utilisé</B>
-      <C>Trouver un tableau optimal</C>
-      <D></D>
+      <A>symétrique</A>
+      <B>asymétrique</B>
+      <C>diagonale</C>
+      <D>linéaire</D>
     </Answers>
-    <GoodAnswer>B</GoodAnswer>
+    <GoodAnswer>A</GoodAnswer>
     <Image></Image>
   </Question>
 
   <Question Id="18">
-    <QuestionText>Dans quelle cas utilise t-on un algorithme génétique ?</QuestionText>
+    <QuestionText>La matrice d'adjacence d'un graphe non orienté est : </QuestionText>
     <Answers>
-      <A>C'est la première étape de création d'une IA de deep learning</A>
-      <B>L'algorithme génétique ne donne pas de résultat parfait.Il n'est donc jamais utilisé</B>
-      <C>Trouver un tableau optimal</C>
-      <D></D>
+      <A>symétrique</A>
+      <B>asymétrique</B>
+      <C>diagonale</C>
+      <D>linéaire</D>
     </Answers>
-    <GoodAnswer>B</GoodAnswer>
+    <GoodAnswer>A</GoodAnswer>
     <Image></Image>
   </Question>
 
   <Question Id="19">
-    <QuestionText>Dans quelle cas utilise t-on un algorithme génétique ?</QuestionText>
+    <QuestionText>La matrice d'adjacence d'un graphe non orienté est : </QuestionText>
     <Answers>
-      <A>C'est la première étape de création d'une IA de deep learning</A>
-      <B>L'algorithme génétique ne donne pas de résultat parfait.Il n'est donc jamais utilisé</B>
-      <C>Trouver un tableau optimal</C>
-      <D></D>
+      <A>symétrique</A>
+      <B>asymétrique</B>
+      <C>diagonale</C>
+      <D>linéaire</D>
     </Answers>
-    <GoodAnswer>B</GoodAnswer>
+    <GoodAnswer>A</GoodAnswer>
     <Image></Image>
   </Question>
 

@@ -36,6 +36,7 @@ namespace App
             Question prochaineQuestion = new Question(idQ[entier]);
             
             txtQuestion.Text= prochaineQuestion.QuestionText;
+            numQ.Text = "Question numéro " +(21-idQ.Count) + " sur 20";
             ckbReponse1.Text = prochaineQuestion.Answers[0];
             ckbReponse2.Text = prochaineQuestion.Answers[1];
             ckbReponse3.Text = prochaineQuestion.Answers[2];
@@ -86,9 +87,11 @@ namespace App
         private void btnSuivant_Click(object sender, EventArgs e)
         {
             noteTot++;
+            if (noteTot==19) btnSuivant.Text = "Fin du test";
             if (bonneReponse()) note++;
             if (noteTot == 20)
             {
+                
                 this.Close();
                 Resultats res = new Resultats(note);
                 res.Show();
@@ -160,6 +163,13 @@ namespace App
         private void ckbReponse3_CheckedChanged(object sender, EventArgs e)
         {
 
+        }
+
+
+
+        private void label2_TextChanged(object sender, EventArgs e)
+        {
+           
         }
     }
 }

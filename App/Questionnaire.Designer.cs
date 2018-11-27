@@ -36,6 +36,7 @@
             this.btnSuivant = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txtQuestion = new System.Windows.Forms.Label();
+            this.numQ = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -45,7 +46,7 @@
             this.ckbReponse1.BackColor = System.Drawing.SystemColors.Control;
             this.ckbReponse1.Font = new System.Drawing.Font("MS Reference Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ckbReponse1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.ckbReponse1.Location = new System.Drawing.Point(34, 117);
+            this.ckbReponse1.Location = new System.Drawing.Point(34, 157);
             this.ckbReponse1.Name = "ckbReponse1";
             this.ckbReponse1.Size = new System.Drawing.Size(110, 23);
             this.ckbReponse1.TabIndex = 1;
@@ -59,7 +60,7 @@
             this.ckbReponse2.AutoSize = true;
             this.ckbReponse2.Font = new System.Drawing.Font("MS Reference Sans Serif", 11.25F);
             this.ckbReponse2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.ckbReponse2.Location = new System.Drawing.Point(34, 206);
+            this.ckbReponse2.Location = new System.Drawing.Point(34, 247);
             this.ckbReponse2.Name = "ckbReponse2";
             this.ckbReponse2.Size = new System.Drawing.Size(110, 23);
             this.ckbReponse2.TabIndex = 2;
@@ -71,7 +72,7 @@
             this.ckbReponse3.AutoSize = true;
             this.ckbReponse3.Font = new System.Drawing.Font("MS Reference Sans Serif", 11.25F);
             this.ckbReponse3.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.ckbReponse3.Location = new System.Drawing.Point(34, 300);
+            this.ckbReponse3.Location = new System.Drawing.Point(34, 341);
             this.ckbReponse3.Name = "ckbReponse3";
             this.ckbReponse3.Size = new System.Drawing.Size(110, 23);
             this.ckbReponse3.TabIndex = 3;
@@ -85,7 +86,7 @@
             this.ckbReponse4.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.ckbReponse4.Font = new System.Drawing.Font("MS Reference Sans Serif", 11.25F);
             this.ckbReponse4.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.ckbReponse4.Location = new System.Drawing.Point(33, 398);
+            this.ckbReponse4.Location = new System.Drawing.Point(33, 439);
             this.ckbReponse4.Name = "ckbReponse4";
             this.ckbReponse4.Size = new System.Drawing.Size(110, 23);
             this.ckbReponse4.TabIndex = 4;
@@ -115,9 +116,9 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(485, 81);
+            this.pictureBox1.Location = new System.Drawing.Point(540, 115);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(500, 400);
+            this.pictureBox1.Size = new System.Drawing.Size(489, 385);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
@@ -135,6 +136,17 @@
             this.txtQuestion.Text = "Question : ?";
             this.txtQuestion.Click += new System.EventHandler(this.txtQuestiona_Click);
             // 
+            // numQ
+            // 
+            this.numQ.AutoSize = true;
+            this.numQ.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numQ.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.numQ.Location = new System.Drawing.Point(1090, 9);
+            this.numQ.Name = "numQ";
+            this.numQ.Size = new System.Drawing.Size(88, 18);
+            this.numQ.TabIndex = 9;
+            this.numQ.Text = "Question : ?";
+            // 
             // Questionnaire
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -142,6 +154,7 @@
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(1190, 622);
+            this.Controls.Add(this.numQ);
             this.Controls.Add(this.txtQuestion);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnSuivant);
@@ -167,5 +180,6 @@
         private System.Windows.Forms.Button btnSuivant;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label txtQuestion;
+        private System.Windows.Forms.Label numQ;
     }
 }
