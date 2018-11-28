@@ -89,7 +89,7 @@ résultat parfait. Il n'est donc jamais utilisé</B>
     <QuestionText>Définition standard de L'IA :</QuestionText>
     <Answers>
       <A>Ensemble des techniques et algorithmes permettant de résoudre
-des problèmes à l’aide d’un ordinateur.</A>
+des problèmes à l’aide d’un ordinateur</A>
       <B>Simulation de l'intelligence</B>
       <C></C>
       <D></D>
@@ -197,7 +197,7 @@ les sommets à gauche sur ce graphe seront choisis avant ceux de droite)
     <Answers>
       <A>Le type de capteur dans un casque EEG</A>
       <B>Un type de réseau de neurone le plus simple</B>
-      <C>Un </C>
+      <C></C>
       <D></D>
     </Answers>
     <GoodAnswer>A</GoodAnswer>
@@ -207,7 +207,7 @@ les sommets à gauche sur ce graphe seront choisis avant ceux de droite)
   <Question Id="16">
     <QuestionText>En quoi consiste le test de Turing ? </QuestionText>
     <Answers>
-      <A>Il consite à tester la faculté d'une machine à imiter la conversation humaine</A>
+      <A>Il consiste à tester la faculté d'une machine à imiter la conversation humaine</A>
       <B>Test servant à déchiffrement de l'information</B>
       <C>Examen d'entrée dans l'école d'Alan turing</C>
       <D></D>
@@ -231,10 +231,10 @@ les sommets à gauche sur ce graphe seront choisis avant ceux de droite)
   <Question Id="18">
     <QuestionText>Qu'est ce que deep blue ?</QuestionText>
     <Answers>
-      <A>Un ordinateur joueur d'echec ayant battu le champion du monde</A>
-      <B>Le premier algorithme de detection d'image </B>
+      <A>Un ordinateur joueur d'échec ayant battu le champion du monde</A>
+      <B>Le premier algorithme de détection d'image</B>
       <C>Un capteur ultraviolet </C>
-      <D> </D>
+      <D></D>
     </Answers>
     <GoodAnswer>A</GoodAnswer>
     <Image></Image>

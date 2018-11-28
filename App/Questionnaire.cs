@@ -13,6 +13,7 @@ namespace App
     public partial class Questionnaire : Form
     {
         static List<int> idQ = new List < int > {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19};
+
         static int noteTot = 0;
         static int note = 0;
         static string bonneRep;
@@ -94,6 +95,9 @@ namespace App
                 
                 this.Close();
                 Resultats res = new Resultats(note);
+                note = 0;
+                noteTot = 0;
+                idQ = new List<int> { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19 };
                 res.Show();
             }
             else
@@ -157,12 +161,22 @@ namespace App
 
         private void ckbReponse1_CheckedChanged(object sender, EventArgs e)
         {
-
+            if (ckbReponse1.Checked==true)
+            {
+                ckbReponse2.Checked = false;
+                ckbReponse3.Checked = false;
+                ckbReponse4.Checked = false;
+            }
         }
 
         private void ckbReponse3_CheckedChanged(object sender, EventArgs e)
         {
-
+            if (ckbReponse3.Checked == true)
+            {
+                ckbReponse1.Checked = false;
+                ckbReponse2.Checked = false;
+                ckbReponse4.Checked = false;
+            }
         }
 
 
@@ -170,6 +184,27 @@ namespace App
         private void label2_TextChanged(object sender, EventArgs e)
         {
            
+        }
+
+        private void ckbReponse2_CheckedChanged(object sender, EventArgs e)
+        {
+
+            if (ckbReponse2.Checked == true)
+            {
+                ckbReponse1.Checked = false;
+                ckbReponse3.Checked = false;
+                ckbReponse4.Checked = false;
+            }
+        }
+
+        private void ckbReponse4_CheckedChanged(object sender, EventArgs e)
+        {
+            if (ckbReponse4.Checked == true)
+            {
+                ckbReponse1.Checked = false;
+                ckbReponse2.Checked = false;
+                ckbReponse3.Checked = false;
+            }
         }
     }
 }

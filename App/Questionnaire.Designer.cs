@@ -66,6 +66,7 @@
             this.ckbReponse2.TabIndex = 2;
             this.ckbReponse2.Text = "checkBox2";
             this.ckbReponse2.UseVisualStyleBackColor = true;
+            this.ckbReponse2.CheckedChanged += new System.EventHandler(this.ckbReponse2_CheckedChanged);
             // 
             // ckbReponse3
             // 
@@ -92,6 +93,7 @@
             this.ckbReponse4.TabIndex = 4;
             this.ckbReponse4.Text = "checkBox4";
             this.ckbReponse4.UseVisualStyleBackColor = true;
+            this.ckbReponse4.CheckedChanged += new System.EventHandler(this.ckbReponse4_CheckedChanged);
             // 
             // btnReponse
             // 
