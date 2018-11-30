@@ -17,12 +17,21 @@ namespace App
         static public int nbnodes = 10;
         static public int numinitial;
         static public int numfinal;
-        static public int etapeCorrection;  //existe pour donner au correcteur le moyen de savoir à quelle ligne il doit comparer.
+        static public int etapeCorrection = 0;  //existe pour donner au correcteur le moyen de savoir à quelle ligne il doit comparer.
         static public List<bool> justeOuPas; // si verification donne que le resultat est juste : justeoupas.append(true) sinon justeoupas.append(false);
         public Dijkstra()
         {
             InitializeComponent();
             initialisationMatrice();
+            numinitial = Convert.ToInt32(textBox1.Text);
+            numfinal = Convert.ToInt32(textBox2.Text);
+            SearchTree g = new SearchTree();
+            Node2 N0 = new Node2();
+            N0.numero = numinitial;
+            List<GenericNode> solution = g.RechercheSolutionAEtoile(N0);
+            g.GetVoidSearchTree(trvTravail);
+
+            trvTravail.LabelEdit = true;
         }
 
         private void btnCorrection_Click(object sender, EventArgs e)
@@ -34,7 +43,6 @@ namespace App
             Node2 N0 = new Node2();
             N0.numero = numinitial;
             List<GenericNode> solution = g.RechercheSolutionAEtoile(N0);
-
             Node2 N1 = N0;
             for (int i = 1; i < solution.Count; i++)
             {
@@ -44,30 +52,9 @@ namespace App
                      + "   : " + Convert.ToString(matrice[N1.numero, N2.numero]));
                 N1 = N2;
             }
-
             g.GetSearchTree(treeView1);
-        }
-        private bool validation (int numEtape)
-        {
-            numinitial = Convert.ToInt32(textBox1.Text);
-            numfinal = Convert.ToInt32(textBox2.Text);
-            SearchTree g = new SearchTree();
-            Node2 N0 = new Node2();
-            N0.numero = numinitial;
-            List<GenericNode> solution = g.RechercheSolutionAEtoile(N0);
 
-            Node2 N1 = N0;
-            for (int i = 1; i < solution.Count; i++)
-            {
-                Node2 N2 = (Node2)solution[i];
-                listBox1.Items.Add(Convert.ToString(N1.numero)
-                     + "--->" + Convert.ToString(N2.numero)
-                     + "   : " + Convert.ToString(matrice[N1.numero, N2.numero]));
-                N1 = N2;
-            }
-
-            g.GetSearchTree(treeView1);
-            return true;
+            CompareTreeNodes(trvTravail, treeView1);
         }
 
         private void initialisationMatrice()
@@ -146,18 +133,22 @@ namespace App
 
         private void btnValideEtape_Click(object sender, EventArgs e)
         {
+            numinitial = Convert.ToInt32(textBox1.Text);
+            numfinal = Convert.ToInt32(textBox2.Text);
             lbFerme.Items.Add(txtBFerme.Text);
             lbOuvert.Items.Add(txtBOuvert.Text);
-            txtBFerme.Text = "";
-            txtBOuvert.Text = "";
             justeOuPas = new List<bool>();
+            SearchTree validation = new SearchTree();
+            Node2 N0 = new Node2();
+            N0.numero = numinitial;
 
-            if (validation(etapeCorrection)) justeOuPas.Add(true);
+            // On vérifie si les ouverts et les fermés donnés sont bien les mêmes à l'étape donné
+            if (validation.RechercheSolutionAEtoileValidation(N0, etapeCorrection, txtBOuvert.Text, txtBFerme.Text)) justeOuPas.Add(true);
             else justeOuPas.Add(false);
-            /* 
-             * si verification donne que le resultat est juste : justeoupas.append(true) sinon justeoupas.append(false);
-             */
+
             etapeCorrection++; //existe pour donner au correcteur le moyen de savoir à quelle ligne il doit comparer.
+            txtBFerme.Text = "";  // On nettoie la zone de travail
+            txtBOuvert.Text = "";
         }
 
         private void btnValideExercice_Click(object sender, EventArgs e)
@@ -175,6 +166,46 @@ namespace App
                 txtBResultat.ForeColor = Color.Red;
                 txtBResultat.Text = "Dommage, vous avez fait une erreur...";
             }
+            //etapeCorrection = 0;
+        }
+
+        private void btnNettoyer_Click(object sender, EventArgs e)
+        {
+            treeView1.Nodes.Clear();
+            listBox1.Items.Clear();
+            lbFerme.Items.Clear();
+            lbOuvert.Items.Clear();
+            txtBFerme.Text = "";
+            txtBOuvert.Text = "";
+            txtBResultat.Text = "";
+            etapeCorrection = 0;
+        }
+        void CompareRecursiveTree(TreeNode tn1, TreeNode tn2)
+        {
+            if (tn1.Text != tn2.Text)
+            {
+                tn1.ForeColor = Color.Red;
+                tn2.ForeColor = Color.Red;
+            }
+            else
+            {
+                tn1.ForeColor = Color.Green;
+                tn2.ForeColor = Color.Green;
+            }
+            int compare = Math.Min(tn1.Nodes.Count, tn2.Nodes.Count);
+            for (int i = 0; i < compare; i++)
+            {
+                CompareRecursiveTree(tn1.Nodes[i], tn2.Nodes[i]);
+            }
+        }
+        void CompareTreeNodes(TreeView tv1, TreeView tv2)
+        {
+            int compare = Math.Min(tv1.Nodes.Count, tv2.Nodes.Count);
+            for (int i = 0; i < compare; i++)
+            {
+                CompareRecursiveTree(tv1.Nodes[i], tv2.Nodes[i]);
+            }
+
         }
     }
 }

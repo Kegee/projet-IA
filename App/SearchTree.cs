@@ -102,6 +102,8 @@ namespace App
             int etape = 0;
             L_Ouverts = new List<GenericNode>();
             L_Fermes = new List<GenericNode>();
+            string ouvertCorrection = "";
+            string fermeCorrection = "";
             // Le noeud passé en paramètre est supposé être le noeud initial
             GenericNode N = N0;
             L_Ouverts.Add(N0);
@@ -109,10 +111,28 @@ namespace App
             // tant que le noeud n'est pas terminal et que ouverts n'est pas vide
             while (L_Ouverts.Count != 0 && N.EndState() == false)
             {
+                foreach (GenericNode x in L_Ouverts)
+                {
+                    ouvertCorrection += x.ToString();
+                }
+                if (L_Fermes.Count != 0)
+                {
+                    foreach (GenericNode x in L_Fermes)
+                    {
+                        fermeCorrection += x.ToString();
+                    }
+                }
+                if ((etape == etapeValidation) && etudeString(ouvertCorrection, ouvertDonne) && etudeString(fermeCorrection, fermeDonne)) return true;
+                /* Si à l'étape que l'on corrige, les ouvert et les fermés donnés sont les mêmes que les ouverts et les fermés trouvés par A* alors on retourne true.
+                   Sinon on retourne false : l'utilisateur c'est trompé !
+                   */
+
                 // Le meilleur noeud des ouverts est supposé placé en tête de liste
                 // On le place dans les fermés
                 L_Ouverts.Remove(N);
                 L_Fermes.Add(N);
+
+
 
                 // Il faut trouver les noeuds successeurs de N
                 this.MAJSuccesseurs(N);
@@ -128,10 +148,31 @@ namespace App
                 {
                     N = null;
                 }
+                // Il faut ensuite nettoyer les string ouvertCorrection et fermeCorrection pour les étapes suivantes:
+                ouvertCorrection = "";
+                fermeCorrection = "";
                 etape++;
             }
+            return false; // Si on sort de la boucle while c'est que l'utilisateur c'est trompé
         }
 
+        // Cette fonction est appelée seulement pour que la position des valeurs dans les ouverts ou les fermés n'importe pas pour la correction
+        // Elle renvoie false si les deux string ne sont pas égaux même en permutant les charactères qui les composent et true sinon
+        private bool etudeString (string A, string B)
+        {
+            // On transforme les string en listes de charactères
+            char[] ATravail = A.ToArray();
+            char[] BTravail = B.ToArray();
+            // On trie les deux tableaux de caractères
+            Array.Sort(ATravail);
+            Array.Sort(BTravail);
+            // On rechange les tableaux en string :
+            A = new string(ATravail);
+            B = new string(BTravail);
+            // Si les string sont les mêmes, on return true, on return false sinon
+            if (A == B) return true;
+            else return false;
+        }
         private void MAJSuccesseurs(GenericNode N)
         {
             // On fait appel à GetListSucc, méthode abstraite qu'on doit réécrire pour chaque
@@ -225,6 +266,18 @@ namespace App
 
             AjouteBranche(L_Fermes[0], TN);
         }
+        public void GetVoidSearchTree(TreeView TV)
+        {
+            if (L_Fermes == null) return;
+            if (L_Fermes.Count == 0) return;
+
+            TV.Nodes.Clear();
+
+            TreeNode TN = new TreeNode("?");
+            TV.Nodes.Add(TN);
+
+            AjouteVoidBranche(L_Fermes[0], TN);
+        }
 
         // AjouteBranche est exclusivement appelée par GetSearchTree; les noeuds sont ajoutés de manière récursive
         private void AjouteBranche(GenericNode GN, TreeNode TN)
@@ -234,6 +287,15 @@ namespace App
                 TreeNode TNfils = new TreeNode(GNfils.ToString());
                 TN.Nodes.Add(TNfils);
                 if (GNfils.GetEnfants().Count > 0) AjouteBranche(GNfils, TNfils);
+            }
+        }
+        private void AjouteVoidBranche(GenericNode GN, TreeNode TN)
+        {
+            foreach (GenericNode GNfils in GN.GetEnfants())
+            {
+                TreeNode TNfils = new TreeNode("?");
+                TN.Nodes.Add(TNfils);
+                if (GNfils.GetEnfants().Count > 0) AjouteVoidBranche(GNfils, TNfils);
             }
         }
 
