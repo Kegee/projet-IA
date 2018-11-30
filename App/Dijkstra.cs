@@ -17,19 +17,21 @@ namespace App
         static public int nbnodes = 10;
         static public int numinitial;
         static public int numfinal;
-        static public int etapeCorrection = 0;  //existe pour donner au correcteur le moyen de savoir à quelle ligne il doit comparer.
+        static public int etapeCorrection = 0;  //existe pour donner au verficateur le moyen de savoir à quelle ligne il doit comparer.
         static public List<bool> justeOuPas; // si verification donne que le resultat est juste : justeoupas.append(true) sinon justeoupas.append(false);
+        static public bool justeArbre = true; // devient false si on a fait une erreur sur l'arbre
+        static public bool justeEnsembles = true; // devient false si on a fait une erreur sur les ensembles
+        static private SearchTree arbreTravail = new SearchTree();
         public Dijkstra()
         {
             InitializeComponent();
             initialisationMatrice();
             numinitial = Convert.ToInt32(textBox1.Text);
             numfinal = Convert.ToInt32(textBox2.Text);
-            SearchTree g = new SearchTree();
             Node2 N0 = new Node2();
             N0.numero = numinitial;
-            List<GenericNode> solution = g.RechercheSolutionAEtoile(N0);
-            g.GetVoidSearchTree(trvTravail);
+            List<GenericNode> solution = arbreTravail.RechercheSolutionAEtoile(N0);
+            arbreTravail.GetVoidSearchTree(trvTravail);
 
             trvTravail.LabelEdit = true;
         }
@@ -144,8 +146,16 @@ namespace App
 
             // On vérifie si les ouverts et les fermés donnés sont bien les mêmes à l'étape donné
             if (validation.RechercheSolutionAEtoileValidation(N0, etapeCorrection, txtBOuvert.Text, txtBFerme.Text)) justeOuPas.Add(true);
-            else justeOuPas.Add(false);
-
+            else
+            {
+                justeOuPas.Add(false);
+                justeEnsembles = false;
+            }
+            // à définir !!!
+            //verification();
+            /* 
+             * si verification donne que le resultat est juste : justeoupas.append(true) sinon justeoupas.append(false);
+             */
             etapeCorrection++; //existe pour donner au correcteur le moyen de savoir à quelle ligne il doit comparer.
             txtBFerme.Text = "";  // On nettoie la zone de travail
             txtBOuvert.Text = "";
@@ -154,6 +164,7 @@ namespace App
         private void btnValideExercice_Click(object sender, EventArgs e)
         {
             bool resultat = true;
+            if (justeOuPas.Count == 0) return;
             foreach (bool verification in justeOuPas) if (!verification) resultat = false;
 
             if (resultat)
@@ -166,7 +177,6 @@ namespace App
                 txtBResultat.ForeColor = Color.Red;
                 txtBResultat.Text = "Dommage, vous avez fait une erreur...";
             }
-            //etapeCorrection = 0;
         }
 
         private void btnNettoyer_Click(object sender, EventArgs e)
@@ -179,11 +189,17 @@ namespace App
             txtBOuvert.Text = "";
             txtBResultat.Text = "";
             etapeCorrection = 0;
+
+            justeOuPas = new List<bool>();
+            justeEnsembles = true;
+            justeArbre = true;
+            arbreTravail.GetVoidSearchTree(trvTravail);
         }
         void CompareRecursiveTree(TreeNode tn1, TreeNode tn2)
         {
             if (tn1.Text != tn2.Text)
             {
+                justeArbre = false;
                 tn1.ForeColor = Color.Red;
                 tn2.ForeColor = Color.Red;
             }
@@ -206,6 +222,19 @@ namespace App
                 CompareRecursiveTree(tv1.Nodes[i], tv2.Nodes[i]);
             }
 
+        }
+
+        private void trvTravail_AfterSelect(object sender, TreeViewEventArgs e)
+        {
+            trvTravail.SelectedNode.BeginEdit();
+        }
+
+        private void btnFinir_Click(object sender, EventArgs e)
+        {
+            int note = 0;
+            if (justeArbre) note += 10;
+            if (justeEnsembles) note += 10;
+            Resultats res = new Resultats(note);
         }
     }
 }

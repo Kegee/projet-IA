@@ -48,6 +48,9 @@
             this.txtBResultat = new System.Windows.Forms.TextBox();
             this.btnNettoyer = new System.Windows.Forms.Button();
             this.trvTravail = new System.Windows.Forms.TreeView();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnFinir = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // listBoxgraphe
@@ -94,7 +97,7 @@
             // 
             // btnCorrection
             // 
-            this.btnCorrection.Location = new System.Drawing.Point(586, 24);
+            this.btnCorrection.Location = new System.Drawing.Point(474, 24);
             this.btnCorrection.Name = "btnCorrection";
             this.btnCorrection.Size = new System.Drawing.Size(75, 23);
             this.btnCorrection.TabIndex = 13;
@@ -191,7 +194,7 @@
             this.btnValideExercice.Name = "btnValideExercice";
             this.btnValideExercice.Size = new System.Drawing.Size(240, 39);
             this.btnValideExercice.TabIndex = 29;
-            this.btnValideExercice.Text = "Valider l\'exercice";
+            this.btnValideExercice.Text = "Verifier ligne";
             this.btnValideExercice.UseVisualStyleBackColor = true;
             this.btnValideExercice.Click += new System.EventHandler(this.btnValideExercice_Click);
             // 
@@ -205,9 +208,9 @@
             // 
             // btnNettoyer
             // 
-            this.btnNettoyer.Location = new System.Drawing.Point(667, 24);
+            this.btnNettoyer.Location = new System.Drawing.Point(518, 379);
             this.btnNettoyer.Name = "btnNettoyer";
-            this.btnNettoyer.Size = new System.Drawing.Size(75, 23);
+            this.btnNettoyer.Size = new System.Drawing.Size(101, 84);
             this.btnNettoyer.TabIndex = 32;
             this.btnNettoyer.Text = "Nettoyer";
             this.btnNettoyer.UseVisualStyleBackColor = true;
@@ -219,12 +222,34 @@
             this.trvTravail.Name = "trvTravail";
             this.trvTravail.Size = new System.Drawing.Size(152, 180);
             this.trvTravail.TabIndex = 33;
+            this.trvTravail.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.trvTravail_AfterSelect);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.ImageLocation = "Dijkstra.PNG";
+            this.pictureBox1.Location = new System.Drawing.Point(432, 254);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(310, 118);
+            this.pictureBox1.TabIndex = 34;
+            this.pictureBox1.TabStop = false;
+            // 
+            // btnFinir
+            // 
+            this.btnFinir.Location = new System.Drawing.Point(641, 379);
+            this.btnFinir.Name = "btnFinir";
+            this.btnFinir.Size = new System.Drawing.Size(101, 84);
+            this.btnFinir.TabIndex = 35;
+            this.btnFinir.Text = "Finir";
+            this.btnFinir.UseVisualStyleBackColor = true;
+            this.btnFinir.Click += new System.EventHandler(this.btnFinir_Click);
             // 
             // Dijkstra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(754, 475);
+            this.Controls.Add(this.btnFinir);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.trvTravail);
             this.Controls.Add(this.btnNettoyer);
             this.Controls.Add(this.txtBResultat);
@@ -247,6 +272,7 @@
             this.Controls.Add(this.textBox1);
             this.Name = "Dijkstra";
             this.Text = "Dijkstra";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -274,5 +300,7 @@
         private System.Windows.Forms.TextBox txtBResultat;
         private System.Windows.Forms.Button btnNettoyer;
         private System.Windows.Forms.TreeView trvTravail;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button btnFinir;
     }
 }
