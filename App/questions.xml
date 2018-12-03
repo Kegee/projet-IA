@@ -241,14 +241,15 @@ les sommets à gauche sur ce graphe seront choisis avant ceux de droite)
   </Question>
 
   <Question Id="19">
-    <QuestionText>La matrice d'adjacence d'un graphe non orienté est : </QuestionText>
+    <QuestionText>Comment est gérée la liste de noeuds dans une stratégie de recherche en largeur d’abord ? </QuestionText>
     <Answers>
-      <A>symétrique</A>
-      <B>asymétrique</B>
-      <C>diagonale</C>
-      <D>linéaire</D>
+      <A>Last In Last Out</A>
+      <B>First In Last Out</B>
+      <C>Last In First Out</C>
+      <D>First In First Out</D>
+
     </Answers>
-    <GoodAnswer>A</GoodAnswer>
+    <GoodAnswer>D</GoodAnswer>
     <Image></Image>
   </Question>
 
